@@ -1,0 +1,5 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name="NSwag" BeforeTargets="Build">
+		<Exec Command="nswag run /runtime:Net80" />
+	</Target>
+</Project>
