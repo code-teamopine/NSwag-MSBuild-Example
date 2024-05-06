@@ -7,6 +7,7 @@ namespace NSwagMSBuildSample.Controllers
     [ApiController]
     public class DummyController : ControllerBase
     {
+        [ProducesResponseType(200, Type = typeof(string))]
         [HttpGet]
         public IActionResult Get()
         {

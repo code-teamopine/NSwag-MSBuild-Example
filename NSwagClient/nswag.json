@@ -3,17 +3,17 @@
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
-      "url": "http://redocly.github.io/redoc/openapi.yaml",
-      "output": null,
+      //"url": "http://redocly.github.io/redoc/openapi.yaml",
+      "url": "https://localhost:7099/swagger/v1/swagger.json",
+      "output": "swagger.json",
       "newLineBehavior": "Auto"
     }
   },
   "codeGenerators": {
     "openApiToTypeScriptClient": {
-	"outputFilePath": "Generated/{controller}Client.cs",
       "className": "{controller}Client",
       "moduleName": "",
-      "namespace": "NSwagMSBuildSample.Clients",
+      "namespace": "",
       "typeScriptVersion": 2.7,
       "template": "Fetch",
       "promiseType": "Promise",
@@ -67,6 +67,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
+      //"output": "ApiClient.ts",
       "output": null,
       "newLineBehavior": "Auto"
     },
@@ -120,7 +121,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "MyNamespace",
+      "namespace": "NSwagClient",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -154,7 +155,8 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": null,
+      //"output": "../NSwagClient/ApiClient.cs",
+      "output": "ApiClient.cs",
       "newLineBehavior": "Auto"
     },
     "openApiToCSharpController": {
@@ -215,6 +217,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
+      //"output": "ApiClientController.cs",
       "output": null,
       "newLineBehavior": "Auto"
     }
