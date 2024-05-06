@@ -2,18 +2,19 @@
 
 using NSwagClient;
 
-var httpClient = new HttpClient();
+const string BaseUrl = "https://localhost:7099";
 
-httpClient.BaseAddress = new Uri("https://localhost:7099");
-
-var client = new Client("https://localhost:7099", httpClient);
+var client = new Client(BaseUrl, new HttpClient
+{
+    BaseAddress = new Uri(BaseUrl)
+});
 
 
 var weathers = await client.GetWeatherForecastAsync();
 
 foreach (var weather in weathers)
 {
-    Console.WriteLine(weather.Summary);
+    Console.WriteLine($"{weather.Date}\t{weather.TemperatureC}°C\t{weather.TemperatureF}°F\t{weather.Summary}");
 }
 
 Console.ReadKey();
