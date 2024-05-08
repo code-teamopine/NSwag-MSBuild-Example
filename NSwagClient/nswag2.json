@@ -4,8 +4,8 @@
   "documentGenerator": {
     "fromDocument": {
       //"url": "http://redocly.github.io/redoc/openapi.yaml",
-      "url": "https://localhost:7099/swagger/v1/swagger.json",
-      "output": "swagger.json",
+      "url": "https://localhost:7135/swagger/v1/swagger.json",
+      "output": "swagger2.json",
       "newLineBehavior": "Auto"
     }
   },
@@ -106,7 +106,7 @@
       "useRequestAndResponseSerializationSettings": false,
       "serializeTypeInformation": false,
       "queryNullValue": "",
-      "className": "{controller}N1Client",
+      "className": "{controller}N2Client",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "additionalNamespaceUsages": [],
       "additionalContractNamespaceUsages": [],
@@ -121,7 +121,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "NSwagClient.Client1",
+      "namespace": "NSwagClient.Client2",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -156,7 +156,7 @@
       "serviceHost": null,
       "serviceSchemes": null,
       //"output": "../NSwagClient/ApiClient.cs",
-      "output": "Api1Client.cs",
+      "output": "Api2Client.cs",
       "newLineBehavior": "Auto"
     },
     "openApiToCSharpController": {
